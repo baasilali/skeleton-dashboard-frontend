@@ -18,10 +18,6 @@ import {
   calculateKPIs,
   getFilterValues,
   getCloseRateTrendChartData,
-  getDealStatusBreakdownChartData,
-  getCloserCommission,
-  getSetterTableData,
-  getCloserTableData,
   getCoachCommission,
   getCoachLeadsBreakdownChartData,
 } from "@/lib/eoc/data";
@@ -30,7 +26,7 @@ import { MetricCard } from "@/components/metric-card";
 import { InteractivePieChart } from "@/components/charts/pie-chart";
 import React from "react";
 import { InteractiveLineChart } from "@/components/charts/line-chart";
-import { SetterCloserTable } from "@/components/tables/setter-closer-table";
+ 
 
 function FilterSelects() {
   const { filters, setFilter } = useDashboardFilters();
@@ -135,10 +131,7 @@ function CoachesBody() {
     [filters]
   );
 
-  const outcomeData = React.useMemo(
-    () => getDealStatusBreakdownChartData(filters),
-    [filters]
-  );
+  
 
   const coachCommission = React.useMemo(
     () => getCoachCommission(filters),

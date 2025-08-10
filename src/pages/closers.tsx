@@ -20,7 +20,6 @@ import {
   getCloseRateTrendChartData,
   getDealStatusBreakdownChartData,
   getCloserCommission,
-  getSetterTableData,
   getCloserTableData,
 } from "@/lib/eoc/data";
 import { MetricCardBold } from "@/components/metric-card-bold";

@@ -17,9 +17,7 @@ import { FilterSelect } from "../components/filter-select";
 import {
   calculateKPIs,
   getFilterValues,
-  getCloseRateTrendChartData,
   getDealStatusBreakdownChartData,
-  getCloserCommission,
   getSetterCommission,
   getShowRateTrendChartData,
   getSetterTableData,

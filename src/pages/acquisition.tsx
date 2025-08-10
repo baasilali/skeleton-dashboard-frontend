@@ -16,7 +16,6 @@ import { DateRangePicker } from "@/components/ui/date-range-picker";
 import { FilterSelect } from "../components/filter-select";
 import {
   calculateKPIs,
-  getLeadSourceBreakdownChartData,
   getFilterValues,
   getFunnelBreakdownChartData,
   getProspectSituationChartData,
@@ -124,10 +123,7 @@ function FilterSelects() {
 function AcquisitionBody() {
   const { filters } = useDashboardFilters();
   const kpis = React.useMemo(() => calculateKPIs(filters), [filters]);
-  const leadSourceData = React.useMemo(
-    () => getLeadSourceBreakdownChartData(filters),
-    [filters]
-  );
+  
 
   const funnelData = React.useMemo(
     () => getFunnelBreakdownChartData(filters),
